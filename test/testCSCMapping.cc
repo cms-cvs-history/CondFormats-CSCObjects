@@ -26,7 +26,8 @@ class testCSCMapping: public CppUnit::TestFixture {
 
 public:
 
-  testCSCMapping() : myName_( "testCSCMapping" ) {}
+  testCSCMapping() : myName_( "testCSCMapping" ), 
+	 dashedLineWidth(104), dashedLine( std::string(dashedLineWidth, '-') )  {}
 
   void setUp(){
     char * ret = getenv("CMSSW_BASE");
@@ -44,6 +45,8 @@ public:
 
  private:
   const std::string myName_;
+  const int dashedLineWidth;
+  std::string dashedLine;
  
 }; 
 
@@ -65,8 +68,8 @@ int testCSCMapping::runIt(const std::string& config){
 
 
 void testCSCMapping::testRead(){
-  std::cout << myName_ << ": --- t e s t R e a d ---" << std::endl;
-  std::cout << "------------------------------------------------" << std::endl;
+  std::cout << myName_ << ": --- t e s t C S C M a p p i n g  ---" << std::endl;
+  std::cout << "start " << dashedLine << std::endl;
 
   std::string mappingFileName = mappingFilePath + "csc_slice_test_map.txt";
 
@@ -74,9 +77,13 @@ void testCSCMapping::testRead(){
  
   //theMapping.setDebugV( true );
 
+  // The following labels are irrelevant to hardware in slice test
   int tmb = -1;
   int endcap = -1;
   int station = -1;
+
+  // Loop over all possible crates and dmb slots in slice test
+  // TEST CSCReadoutMapping::chamber(...)
 
   for ( int i=0; i<2; ++i ){
     int vmecrate = i;
@@ -84,18 +91,40 @@ void testCSCMapping::testRead(){
       if ( j==6 ) continue;
       int dmb = j;
 
-  std::cout << myName_ << ": search for sw id for hw labels, endcap= " << endcap <<
-    ", station=" << station << ", vmecrate=" << vmecrate << 
-    ", dmb=" << dmb << ", tmb= " << tmb << std::endl;
-  int id = theMapping.chamber(endcap, station, vmecrate, dmb, tmb);
-  std::cout << myName_ << ": found chamber rawId = " << id << std::endl;
-  CSCDetId cid( id );
-  std::cout << myName_ << ": from CSCDetId for this chamber, endcap= " << cid.endcap() <<
-    ", station=" << cid.station() << ", ring=" << cid.ring() << 
-    ", chamber=" << cid.chamber() << std::endl;
+      std::cout << "\n" << myName_ << ": search for sw id for hw labels, endcap= " << endcap <<
+                   ", station=" << station << ", vmecrate=" << vmecrate << 
+                   ", dmb=" << dmb << ", tmb= " << tmb << std::endl;
+      int id = theMapping.chamber(endcap, station, vmecrate, dmb, tmb);
+    
+      std::cout << myName_ << ": found chamber rawId = " << id << std::endl;
+    
+      CSCDetId cid( id );
+
+      std::cout << myName_ << ": from CSCDetId for this chamber, endcap= " << cid.endcap() <<
+                              ", station=" << cid.station() << ", ring=" << cid.ring() << 
+                              ", chamber=" << cid.chamber() << std::endl;
+
+// Now try direct mapping for specific layers 
+// TEST CSCReadoutMapping::detId(...) 
+
+      for ( int layer=1; layer<=6; ++layer ) {
+        std::cout << myName_ << ": map layer with hw labels, endcap= " << endcap <<
+                                ", station=" << station << ", vmecrate=" << vmecrate << 
+                                ", dmb=" << dmb << ", tmb= " << tmb << ", layer=" << layer << std::endl;
+
+        CSCDetId lid = theMapping.detId( endcap, station, vmecrate, dmb, tmb, layer );
+
+        // And check what we've actually selected...
+        std::cout << myName_ << ": from CSCDetId for this layer, endcap= " << lid.endcap() <<
+                                ", station=" << lid.station() << ", ring=" << lid.ring() << 
+                                ", chamber=" << lid.chamber() << ", layer=" << lid.layer() << std::endl;         
+      }
+
+      std::cout << std::endl;
 
     }
   }
+  std::cout << dashedLine << " end" << std::endl;
 }
 
 
