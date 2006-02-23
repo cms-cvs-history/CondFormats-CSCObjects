@@ -1,6 +1,6 @@
 <use name=DataFormats/MuonDetId>
 <use name=CondFormats/CSCObjects>
 
-<bin name=testCSCMapping file=testRunner.cc,testCSCMapping.cc>
+<bin name=testCSCMapping file=testRunner.cc,testCSCMapping.cc,testCSCTriggerMapping.cc>
   <use name=cppunit>
 </bin>
