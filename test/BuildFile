@@ -14,6 +14,19 @@
         <flags SEAL_PLUGIN_NAME="CSCPedestalReadAnalyzer">
 </library>
 
+<library file=stubs/CSCGainsReadAnalyzer.cc name=CSCGainsReadAnalyzer>
+        <flags SEAL_PLUGIN_NAME="CSCGainsReadAnalyzer">
+</library>
+
+<library file=stubs/CSCCrossTalkReadAnalyzer.cc name=CSCCrossTalkReadAnalyzer>
+        <flags SEAL_PLUGIN_NAME="CSCCrossTalkReadAnalyzer">
+</library>
+
+<library file=stubs/CSCNoiseMatrixReadAnalyzer.cc name=CSCNoiseMatrixReadAnalyzer>
+        <flags SEAL_PLUGIN_NAME="CSCNoiseMatrixReadAnalyzer">
+</library>
+
+
 <bin name=testCSCMapping file=testCSCMapping.cpp>
   <use name=cppunit>
 </bin>
