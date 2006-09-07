@@ -8,6 +8,7 @@
 <use name=CondCore/ESSources>
 <use name=FWCore/Framework>
 <use name=CondFormats/DataRecord>
+<use name=root>
 <bin file=testWriteCSCPedestals.cpp></bin>
 
 <library file=stubs/CSCPedestalReadAnalyzer.cc name=CSCPedestalReadAnalyzer>
@@ -25,6 +26,11 @@
 <library file=stubs/CSCNoiseMatrixReadAnalyzer.cc name=CSCNoiseMatrixReadAnalyzer>
         <flags SEAL_PLUGIN_NAME="CSCNoiseMatrixReadAnalyzer">
 </library>
+
+<library file=CSCGainsStudy.cc name=CSCGainsStudy>
+        <flags SEAL_PLUGIN_NAME="CSCGainsStudy">
+</library>
+
 
 
 <bin name=testCSCMapping file=testCSCMapping.cpp>
