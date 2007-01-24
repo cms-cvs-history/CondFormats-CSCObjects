@@ -2,14 +2,9 @@
 <use name=CondFormats/CSCObjects>
 
 <use name=FWCore/ParameterSet>
-<use name=CondCore/DBCommon>
-<use name=CondCore/IOVService>
-<use name=CondCore/MetaDataService>
-<use name=CondCore/ESSources>
 <use name=FWCore/Framework>
 <use name=CondFormats/DataRecord>
 <use name=root>
-<bin file=testWriteCSCPedestals.cpp></bin>
 
 <library file=stubs/CSCPedestalReadAnalyzer.cc name=CSCPedestalReadAnalyzer>
         <flags SEAL_PLUGIN_NAME="CSCPedestalReadAnalyzer">
