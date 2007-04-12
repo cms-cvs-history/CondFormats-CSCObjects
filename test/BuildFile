@@ -7,23 +7,23 @@
 <use name=root>
 
 <library file=stubs/CSCPedestalReadAnalyzer.cc name=CSCPedestalReadAnalyzer>
-        <flags SEAL_PLUGIN_NAME="CSCPedestalReadAnalyzer">
+        <flags EDM_PLUGIN=1>
 </library>
 
 <library file=stubs/CSCGainsReadAnalyzer.cc name=CSCGainsReadAnalyzer>
-        <flags SEAL_PLUGIN_NAME="CSCGainsReadAnalyzer">
+        <flags EDM_PLUGIN=1>
 </library>
 
 <library file=stubs/CSCCrossTalkReadAnalyzer.cc name=CSCCrossTalkReadAnalyzer>
-        <flags SEAL_PLUGIN_NAME="CSCCrossTalkReadAnalyzer">
+        <flags EDM_PLUGIN=1>
 </library>
 
 <library file=stubs/CSCNoiseMatrixReadAnalyzer.cc name=CSCNoiseMatrixReadAnalyzer>
-        <flags SEAL_PLUGIN_NAME="CSCNoiseMatrixReadAnalyzer">
+        <flags EDM_PLUGIN=1>
 </library>
 
 <library file=CSCGainsStudy.cc name=CSCGainsStudy>
-        <flags SEAL_PLUGIN_NAME="CSCGainsStudy">
+        <flags EDM_PLUGIN=1>
 </library>
 
 
