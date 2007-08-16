@@ -10,7 +10,15 @@
         <flags EDM_PLUGIN=1>
 </library>
 
+<library file=stubs/CSCPedestalDBReadAnalyzer.cc name=CSCPedestalDBReadAnalyzer>
+        <flags EDM_PLUGIN=1>
+</library>
+
 <library file=stubs/CSCGainsReadAnalyzer.cc name=CSCGainsReadAnalyzer>
+        <flags EDM_PLUGIN=1>
+</library>
+
+<library file=stubs/CSCGainsDBReadAnalyzer.cc name=CSCGainsDBReadAnalyzer>
         <flags EDM_PLUGIN=1>
 </library>
 
@@ -18,7 +26,15 @@
         <flags EDM_PLUGIN=1>
 </library>
 
+<library file=stubs/CSCCrossTalkDBReadAnalyzer.cc name=CSCCrossTalkDBReadAnalyzer>
+        <flags EDM_PLUGIN=1>
+</library>
+
 <library file=stubs/CSCNoiseMatrixReadAnalyzer.cc name=CSCNoiseMatrixReadAnalyzer>
+        <flags EDM_PLUGIN=1>
+</library>
+
+<library file=stubs/CSCNoiseMatrixDBReadAnalyzer.cc name=CSCNoiseMatrixDBReadAnalyzer>
         <flags EDM_PLUGIN=1>
 </library>
 
