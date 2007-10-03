@@ -10,6 +10,23 @@
         <flags EDM_PLUGIN=1>
 </library>
 
+<library file=stubs/CSCReadChamberMapValuesAnalyzer.cc name=CSCReadChamberMapValuesAnalyzer>
+        <flags EDM_PLUGIN=1>
+</library>
+
+<library file=stubs/CSCReadChamberIndexValuesAnalyzer.cc name=CSCReadChamberIndexValuesAnalyzer>
+        <flags EDM_PLUGIN=1>
+</library>
+
+<library file=stubs/CSCReadDDUMapValuesAnalyzer.cc name=CSCReadDDUMapValuesAnalyzer>
+        <flags EDM_PLUGIN=1>
+</library>
+
+<library file=stubs/CSCReadCrateMapValuesAnalyzer.cc name=CSCReadCrateMapValuesAnalyzer>
+        <flags EDM_PLUGIN=1>
+</library>
+
+
 <library file=stubs/CSCPedestalDBReadAnalyzer.cc name=CSCPedestalDBReadAnalyzer>
         <flags EDM_PLUGIN=1>
 </library>
