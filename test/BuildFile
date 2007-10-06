@@ -59,6 +59,9 @@
         <flags EDM_PLUGIN=1>
 </library>
 
+<library file=stubs/CSCReadoutMapTest.cc name=CSCReadoutMapTest>
+        <flags EDM_PLUGIN=1>
+</library>
 
 
 <bin name=testCSCMapping file=testCSCMapping.cpp>
