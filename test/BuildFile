@@ -67,6 +67,10 @@
         <flags EDM_PLUGIN=1>
 </library>
 
+<library file=stubs/CSCReadBadChambersAnalyzer.cc name=CSCReadBadChambersAnalyzer>
+        <flags EDM_PLUGIN=1>
+</library>
+
 <bin name=testCSCMapping file=testCSCMapping.cpp>
   <use name=cppunit>
 </bin>
