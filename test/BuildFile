@@ -78,3 +78,7 @@
 <bin name=testCSCTriggerMapping file=testCSCTriggerMapping.cpp>
   <use name=cppunit>
 </bin>
+
+<library file=stubs/CSCReadDCSDataAnalyzer.cc name=CSCReadDCSDataAnalyzer>
+  <flags EDM_PLUGIN=1>
+</library>
