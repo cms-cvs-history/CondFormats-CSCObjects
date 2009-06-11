@@ -59,6 +59,10 @@
         <flags EDM_PLUGIN=1>
 </library>
 
+<library file=stubs/CSCReadBadWiresAnalyzer.cc name=CSCReadBadWiresAnalyzer>
+        <flags EDM_PLUGIN=1>
+</library>
+
 <library file=CSCGainsStudy.cc name=CSCGainsStudy>
         <flags EDM_PLUGIN=1>
 </library>
