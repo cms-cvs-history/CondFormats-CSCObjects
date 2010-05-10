@@ -86,3 +86,7 @@
 <library file=stubs/CSCReadDCSDataAnalyzer.cc name=CSCReadDCSDataAnalyzer>
   <flags EDM_PLUGIN=1>
 </library>
+
+<library file=stubs/CSCReadCablesAnalyzer.cc name=CSCReadCablesAnalyzer>
+  <flags EDM_PLUGIN=1>
+</library>
