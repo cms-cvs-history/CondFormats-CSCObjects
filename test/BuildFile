@@ -27,6 +27,10 @@
 </library>
 
 
+<library file=stubs/CSCChipSpeedCorrectionDBReadAnalyzer.cc name=CSCChipSpeedCorrectionDBReadAnalyzer>
+        <flags EDM_PLUGIN=1>
+</library>
+
 <library file=stubs/CSCPedestalDBReadAnalyzer.cc name=CSCPedestalDBReadAnalyzer>
         <flags EDM_PLUGIN=1>
 </library>
@@ -87,6 +91,6 @@
   <flags EDM_PLUGIN=1>
 </library>
 
-<library file=stubs/CSCReadCablesAnalyzer.cc name=CSCReadCablesAnalyzer>
+<library file=stubs/CSCReadChamberTimeCorrectionsAnalyzer.cc name=CSCReadChamberTimeCorrectionsAnalyzer>
   <flags EDM_PLUGIN=1>
 </library>
