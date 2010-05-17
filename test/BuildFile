@@ -22,6 +22,10 @@
         <flags EDM_PLUGIN=1>
 </library>
 
+<library file=stubs/CSCReadChamberTimeCorrAnalyzer.cc name=CSCReadChamberTimeCorrAnalyzer>
+        <flags EDM_PLUGIN=1>
+</library>
+
 <library file=stubs/CSCReadCrateMapValuesAnalyzer.cc name=CSCReadCrateMapValuesAnalyzer>
         <flags EDM_PLUGIN=1>
 </library>
